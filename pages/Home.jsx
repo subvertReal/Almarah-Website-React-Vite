@@ -1,4 +1,5 @@
 import '../src/App.css'
+import '../src/styles/Home.css'
 
 // bootstrap imports
 <link
