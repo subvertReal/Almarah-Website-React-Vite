@@ -12,6 +12,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from '../components/NavBar'
 import Footer from '../components/NavBar'
 
+import ImageSlideshow from '../components/Home/ImageSlideshow';
+
 
 function App() {
 
@@ -19,6 +21,7 @@ function App() {
     <>
     <NavBar />
       <div>hi</div>
+    <ImageSlideshow />
     
       </>
       )

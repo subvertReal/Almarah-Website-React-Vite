@@ -2,6 +2,9 @@ import Home from '../pages/Home.jsx'
 import Products from '../pages/Products.jsx'
 import Location from '../pages/Location.jsx'
 
+// men clothing dropdown
+import ShalwarKameez from '../pages/mensClothing/ShalwarKameez.jsx';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import './App.css'
@@ -18,7 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
-        <Route path='/location' element={<Location />} />
+        <Route path='/shalwar-kameez' element={<ShalwarKameez />} />
 
 
 
