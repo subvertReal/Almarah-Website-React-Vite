@@ -1,10 +1,15 @@
 import Container from 'react-bootstrap/esm/Container'
-import storePage from '../../public/storePage.webp'
+import storePage1 from '../../public/slideshowAssets/1.webp'
+import storePage2 from '../../public/slideshowAssets/2.webp'
 
 // assets
 import lArrow from '../../public/lArrow.png'
 import rArrow from '../../public/rArrow.png'
 
+
+function slideshowLeft(){
+
+}
 
 function ImageSlideshow () {
 
@@ -16,7 +21,7 @@ function ImageSlideshow () {
                 <button  className='slideShowBtn slideshowRight'>
                     <img src={rArrow}></img>
                 </button>
-                <img id='storeSlideshow' src={storePage}></img>
+                <img id='storeSlideshow' src={storePage1}></img>
             </div>
 
 
