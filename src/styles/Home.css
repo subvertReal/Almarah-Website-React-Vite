@@ -1,11 +1,17 @@
 .slideshowLeft{
-
+    
     text-align: center;
 }
 
+
 .containerSlideshow{
     position: relative;
-  width: 50%;
+
+}
+
+.arrow{
+    width: 0.5em;
+    height: auto;
 }
 
 .containerSlideshow img {
@@ -18,7 +24,7 @@
   top: 50%;
 
 
-  background-color: #555;
+  background-color: transparent;
   color: white;
   font-size: 16px;
   padding: 12px 24px;
@@ -27,9 +33,11 @@
   border-radius: 5px;
 }
 
-.containerSlideshow .slideshow:hover {
+.containerSlideshow .slideShowBtn:hover {
   background-color: black;
 }
+
+
 
 
 
@@ -39,7 +47,7 @@
   top: 50%;
   right:0px;
 
-  background-color: #555;
+  background-color: transparent;
   color: white;
   font-size: 16px;
   padding: 12px 24px;
@@ -50,6 +58,3 @@
 
 
 
-.containerSlideshow .slideshowLeft:hover {
-  background-color: black;
-}
