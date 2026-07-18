@@ -8,17 +8,22 @@ import rArrow from '../../public/rArrow.png'
 
 
 function slideshowLeft(){
+    let slideImg = document.getElementById('storeSlideshow');
+    slideImg.src=storePage2;
+}
 
+function slideshowRight(){
+    
 }
 
 function ImageSlideshow () {
 
     return (
         <>  <div className='containerSlideshow'>
-                <button className='slideShowBtn slideshowLeft'>
+                <button onClick={slideshowLeft} className='slideShowBtn slideshowLeft'>
                     <img src={lArrow}></img>
                 </button>
-                <button  className='slideShowBtn slideshowRight'>
+                <button onClick={slideshowRight} className='slideShowBtn slideshowRight'>
                     <img src={rArrow}></img>
                 </button>
                 <img id='storeSlideshow' src={storePage1}></img>
