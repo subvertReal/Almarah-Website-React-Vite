@@ -11,14 +11,7 @@ import rArrow from '../../public/rArrow.png'
 import jsonData from '../../src/assets/api.json';
 
 
-function slideshowLeft(){
-    let slideImg = document.getElementById('storeSlideshow');
-    slideImg.src=storePage2;
-}
 
-function slideshowRight(){
-    
-}
 
 
 
@@ -26,19 +19,64 @@ function slideshowRight(){
 
 
 function ImageSlideshow () {
+    const [slideShowArr, setSlideShowArr] = useState(); // store names of images of the slideshow for the url
+    const [count, setCount] = useState(0); // keeps track of the current image in slideShowArr
+
+    function slideshowLeft(){ // moves slideshow to the left
+
+        if(count-1 >= 0){
+            let slideImg = document.getElementById('storeSlideshow');
+                setCount(prev => {
+                const newCount = prev - 1;
+                slideImg.src=`http://localhost:3000/static/${slideShowArr[newCount]}`;
+                
+                return newCount;
+            });
+        }
+        
+    
+    }   
+
+    function slideshowRight(){ // moves slideshow to the right
+
+        if(count+1 <= slideShowArr.length-1){
+            let slideImg = document.getElementById('storeSlideshow');
+                setCount(prev => {
+                const newCount = prev + 1;
+                slideImg.src=`http://localhost:3000/static/${slideShowArr[newCount]}`;
+                
+                return newCount;
+            });
+        }
+        
+        
+    }
 
     
-    const [slideShowArr, setSlideShowArr] = useState();
-
 
     useEffect(() => {
-
+        // function accesses api, finds out image names, creates an array with those names, and sets them in a useState
         async function getSlideShowData(){
     
             console.log('Accessing api link: '+jsonData.apiLink);
             const response = await fetch(jsonData.apiLink+'/scan');
 
-            return await response.text();
+            let data = await response.json();
+   
+            let slideImg = document.getElementById('storeSlideshow');
+
+            slideImg.src=`http://localhost:3000/static/${data[0]["name"]}`; //sets the first image as the slideshow as a default
+            let arr = []
+            let i =0;
+            while(i in data){
+   
+                arr.push(data[i]["name"])
+
+                i++;
+            }
+
+            setSlideShowArr(arr);
+
 
         }
 
@@ -46,6 +84,9 @@ function ImageSlideshow () {
 
 
     }, []);
+
+    
+
 
     return (
         <div className='containerSlideshow'>
