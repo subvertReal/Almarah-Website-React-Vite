@@ -1,13 +1,9 @@
-import Container from 'react-bootstrap/esm/Container'
-import storePage1 from '../../public/slideshowAssets/1.webp'
-import storePage2 from '../../public/slideshowAssets/2.webp'
 import { useEffect, useState } from "react";
 
 
 // assets
 import lArrow from '../../public/lArrow.png'
 import rArrow from '../../public/rArrow.png'
-// const api = require('../../src/assets/api.json');
 import jsonData from '../../src/assets/api.json';
 
 
@@ -28,7 +24,7 @@ function ImageSlideshow () {
             let slideImg = document.getElementById('storeSlideshow');
                 setCount(prev => {
                 const newCount = prev - 1;
-                slideImg.src=`http://localhost:3000/static/${slideShowArr[newCount]}`;
+                slideImg.src=`http://localhost:3000/static/slideshow/${slideShowArr[newCount]}`;
                 
                 return newCount;
             });
@@ -43,7 +39,7 @@ function ImageSlideshow () {
             let slideImg = document.getElementById('storeSlideshow');
                 setCount(prev => {
                 const newCount = prev + 1;
-                slideImg.src=`http://localhost:3000/static/${slideShowArr[newCount]}`;
+                slideImg.src=`http://localhost:3000/static/slideshow/${slideShowArr[newCount]}`;
                 
                 return newCount;
             });
@@ -59,13 +55,13 @@ function ImageSlideshow () {
         async function getSlideShowData(){
     
             console.log('Accessing api link: '+jsonData.apiLink);
-            const response = await fetch(jsonData.apiLink+'/scan');
+            const response = await fetch(jsonData.apiLink+'/scan/slideshow');
 
             let data = await response.json();
    
             let slideImg = document.getElementById('storeSlideshow');
 
-            slideImg.src=`http://localhost:3000/static/${data[0]["name"]}`; //sets the first image as the slideshow as a default
+            slideImg.src=`http://localhost:3000/static/slideshow/${data[0]["name"]}`; //sets the first image as the slideshow as a default
             let arr = []
             let i =0;
             while(i in data){
@@ -96,7 +92,7 @@ function ImageSlideshow () {
                  <button onClick={slideshowRight} className='slideShowBtn slideshowRight'>
                      <img src={rArrow}></img>
                  </button>
-                 <img id='storeSlideshow' src={storePage1}></img>
+                 <img id='storeSlideshow'></img>
              </div>
     );
 }
