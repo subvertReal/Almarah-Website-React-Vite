@@ -1,3 +1,4 @@
+//css imports
 import '../src/App.css'
 import '../src/styles/Home.css'
 
@@ -10,10 +11,12 @@ import '../src/styles/Home.css'
 />
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Page components
 import NavBar from '../components/NavBar'
 import Footer from '../components/NavBar'
 
 import ImageSlideshow from '../components/Home/ImageSlideshow';
+import ShowCaseOne from '../components/Home/ShowCaseOne';
 
 
 function App() {
@@ -24,6 +27,7 @@ function App() {
 
     <ImageSlideshow />
     
+    <ShowCaseOne />
       </>
       )
 }
