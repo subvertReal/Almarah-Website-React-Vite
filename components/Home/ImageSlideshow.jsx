@@ -1,18 +1,9 @@
 import { useEffect, useState } from "react";
 
-
 // assets
-import lArrow from '../../public/lArrow.png'
-import rArrow from '../../public/rArrow.png'
+import lArrow from '../../src/lArrow.png'
+import rArrow from '../../src/rArrow.png'
 import jsonData from '../../src/assets/api.json';
-
-
-
-
-
-
-
-
 
 function ImageSlideshow () {
     const [slideShowArr, setSlideShowArr] = useState(); // store names of images of the slideshow for the url
@@ -29,8 +20,6 @@ function ImageSlideshow () {
                 return newCount;
             });
         }
-        
-    
     }   
 
     function slideshowRight(){ // moves slideshow to the right
@@ -43,12 +32,8 @@ function ImageSlideshow () {
                 
                 return newCount;
             });
-        }
-        
-        
-    }
-
-    
+        }        
+    } 
 
     useEffect(() => {
         // function accesses api, finds out image names, creates an array with those names, and sets them in a useState

@@ -8,26 +8,44 @@ import { useEffect, useState } from "react";
 
 
 // assets
-import img1 from '../../public/1.png'
+import '../../src/styles/ShowCaseOne.css'
+import img1 from '../../src/1.png'
 import jsonData from '../../src/assets/api.json';
 
 function ShowCaseOne(){
+    const [imgArr, setImgArr] = useState([]);
+
+    useEffect(() => {
+        // function accesses api, gets json, and puts them into imgArr
+        async function getShowCaseData(){
+    
+            const response = await fetch(jsonData.apiLink+'/scan/showcase-one');
+
+            let data = await response.json();
+            
+            setImgArr(data);
+
+        }
+
+        getShowCaseData();
+
+
+    }, []);
+
+
     return(
         <>
-            <Container>
+            <Container className='container'>
                 <Row>
-                    <Col>
-                        <Image src={img1}  width={171} rounded />
-                    </Col>
-                    <Col>
-                        <Image src={img1}  width={171} rounded />
-                    </Col>
-                    <Col>
-                        <Image src={img1}  width={171} rounded />
-                    </Col>
-                    <Col>
-                        <Image src={img1}  width={171} rounded />
-                    </Col>
+                    
+                        <Col >
+                        {imgArr.map((image, index) => (
+                        <Image className='showcaseoneimg' key={index}
+                            src={`http://localhost:3000/static/ShowCaseOne/${image.name}`}
+                            rounded
+                        />))}
+
+                        </Col>
                 </Row>
             </Container>
         </>
