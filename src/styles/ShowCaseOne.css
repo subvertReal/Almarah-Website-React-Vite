@@ -1,9 +1,30 @@
+@font-face {
+    font-family: Elise;
+    src: url('../ReadexPro-Light.ttf');
+}
+
 .container{
+    
     padding-top: 1em;
+    /* padding-bottom: 1em; */
 }
 
 .showcaseoneimg{
-    padding-right: 1em;
-    width: 25%;
+    padding-bottom: 1em;
+    width: 100%;
     height: auto;
+}
+
+#showcaseHeader{
+    text-align: left;
+    font-family: Elise;
+    font-size: 2em;
+    font-weight:lighter
+}
+
+#showcaseText{
+    text-align: left;
+    font-family: Elise;
+    padding-bottom: 0.5em;
+    font-size: 0.8em;
 }

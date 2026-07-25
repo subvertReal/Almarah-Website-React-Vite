@@ -36,16 +36,20 @@ function ShowCaseOne(){
     return(
         <>
             <Container className='container'>
+            <div id='showcaseHeader'>Dress for Every Grand Occasion</div>
+            <div id='showcaseText'>Celebrate life's finest moments with our exclusive collection of premium ethnic wear. Discover beautifully tailored kurtas, elegant sherwanis, and festive ensembles designed with luxurious fabrics and exceptional craftsmanship for every celebration.</div>
+            
                 <Row>
-                    
-                        <Col >
-                        {imgArr.map((image, index) => (
+                    {imgArr.map((image, index) => (
+                        <Col className='showcaseOneColumn' xs={12} sm={6} md={4} lg={3}>
+                        
                         <Image className='showcaseoneimg' key={index}
                             src={`http://localhost:3000/static/ShowCaseOne/${image.name}`}
                             rounded
-                        />))}
+                        />
 
                         </Col>
+                    ))}
                 </Row>
             </Container>
         </>
