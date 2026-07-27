@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Page components
 import NavBar from '../components/NavBar'
-import Footer from '../components/NavBar'
+import Footer from '../components/Footer'
 
 import ImageSlideshow from '../components/Home/ImageSlideshow';
 import ShowCaseOne from '../components/Home/ShowCaseOne';
@@ -28,6 +28,8 @@ function App() {
     <ImageSlideshow />
     
     <ShowCaseOne />
+
+    <Footer />
       </>
       )
 }

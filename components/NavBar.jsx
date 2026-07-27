@@ -9,7 +9,7 @@ import '../src/styles/navbar.css'
 function NavBar(){
 
     return(
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar id='nav' expand="lg" className="bg-body-tertiary">
             <Container>
                 {/* <Navbar.Brand  href="/"><img id='paanHutLogo' src=''></img></Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

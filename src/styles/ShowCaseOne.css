@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Elise;
+    font-family: ReadexPro;
     src: url('../ReadexPro-Light.ttf');
 }
 
@@ -17,7 +17,7 @@
 
 #showcaseHeader{
     text-align: left;
-    font-family: Elise;
+    font-family: ReadexPro;
     font-size: 2em;
     font-weight:lighter
 }

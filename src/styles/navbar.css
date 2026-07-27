@@ -4,7 +4,29 @@
     color: #dc3545;
 }
 
-#paanHutLogo{
-    width: 5em;
-    height: auto;
+.show{
+    border: 10px black !important;
 }
+
+.dropdown-menu{
+    background-color: rgb(70, 0, 0) !important;
+    
+
+}
+
+#nav{
+    padding-bottom: 1em;
+    background-color: rgb(70, 0, 0) !important;
+    color: white !important;
+}
+
+#nav .dropdown-item {
+    color: white;
+    background-color: rgb(70, 0, 0) !important;
+}
+
+.nav-link{
+    color: white;
+    background-color: rgb(70, 0, 0) !important;
+}
+
