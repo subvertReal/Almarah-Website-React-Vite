@@ -47,7 +47,7 @@ function ShalwarKameez(){
                         <Col className='showcaseOneColumn' xs={12} sm={6} md={4} lg={3}>
                         
                         <Image className='showcaseoneimg' key={index}
-                            src={`http://localhost:3000/static/menClothing/shalwarKameez/${image.name}`}
+                            src={`${jsonData.apiLink}/static/menClothing/shalwarKameez/${image.name}`}
                             rounded
                         />
 

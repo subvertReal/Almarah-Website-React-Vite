@@ -15,7 +15,7 @@ function ImageSlideshow () {
             let slideImg = document.getElementById('storeSlideshow');
                 setCount(prev => {
                 const newCount = prev - 1;
-                slideImg.src=`http://localhost:3000/static/slideshow/${slideShowArr[newCount]}`;
+                slideImg.src=`${jsonData.apiLink}/static/slideshow/${slideShowArr[newCount]}`;
                 
                 return newCount;
             });
@@ -28,7 +28,7 @@ function ImageSlideshow () {
             let slideImg = document.getElementById('storeSlideshow');
                 setCount(prev => {
                 const newCount = prev + 1;
-                slideImg.src=`http://localhost:3000/static/slideshow/${slideShowArr[newCount]}`;
+                slideImg.src=`${jsonData.apiLink}/static/slideshow/${slideShowArr[newCount]}`;
                 
                 return newCount;
             });
@@ -46,7 +46,7 @@ function ImageSlideshow () {
    
             let slideImg = document.getElementById('storeSlideshow');
 
-            slideImg.src=`http://localhost:3000/static/slideshow/${data[0]["name"]}`; //sets the first image as the slideshow as a default
+            slideImg.src=`${jsonData.apiLink}/static/slideshow/${data[0]["name"]}`; //sets the first image as the slideshow as a default
             let arr = []
             let i =0;
             while(i in data){
