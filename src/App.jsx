@@ -3,7 +3,7 @@ import Products from '../pages/Products.jsx'
 import Location from '../pages/Location.jsx'
 
 // men clothing dropdown
-import ShalwarKameez from '../components/mensClothing/ShalwarKameez.jsx';
+import ShalwarKameez from '../../almarah-reactvite/pages/mensClothing/ShalwarKameez.jsx';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 

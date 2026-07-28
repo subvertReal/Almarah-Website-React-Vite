@@ -5,8 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
 // page components
-import NavBar from "../NavBar"
-import Footer from "../Footer"
+import NavBar from "../../components/NavBar"
+import Footer from "../../components/Footer"
 
 import { useEffect, useState } from "react";
 
@@ -57,6 +57,8 @@ function ShalwarKameez(){
                 </Container>
             </div>
         </Container>
+
+        <Footer />
 
 
 
