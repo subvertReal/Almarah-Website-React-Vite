@@ -4,21 +4,25 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 
+// page components
+import NavBar from "../../components/NavBar"
+import Footer from "../../components/Footer"
+
 import { useEffect, useState } from "react";
 
+//css import
+import '../../src/styles/clothingGlobal.css'
 
-// assets
-import '../../src/styles/ShowCaseOne.css'
 import jsonData from '../../src/assets/api.json';
 
-function ShowCaseOne(){
+function FancyKurtas(){
     const [imgArr, setImgArr] = useState([]);
 
     useEffect(() => {
         // function accesses api, gets json, and puts them into imgArr
         async function getShowCaseData(){
     
-            const response = await fetch(jsonData.apiLink+'/scan/showcase-one');
+            const response = await fetch(jsonData.apiLink+'/scan/fancy-kurtas');
 
             let data = await response.json();
             
@@ -30,29 +34,36 @@ function ShowCaseOne(){
 
 
     }, []);
+    return (<>
+         <NavBar />
 
-
-    return(
-        <>
-            <Container className='container'>
-            <div id='showcaseHeader'>Dress for Every Grand Occasion</div>
-            <div id='showcaseText'>Celebrate life's finest moments with our exclusive collection of premium ethnic wear. Discover beautifully tailored kurtas, elegant sherwanis, and festive ensembles designed with luxurious fabrics and exceptional craftsmanship for every celebration.</div>
-            
-                <Row>
+        <Container>
+            <div className='headerWhitespaceClothingGlobal'>
+                <div className='headerClothingGlobal'>Fancy Kurta</div>
+                <Container>
+                    <Row>
                     {imgArr.map((image) => (
                         <Col className='showcaseOneColumn' xs={12} sm={6} md={4} lg={3} key={image.name}>
                         
                         <Image className='showcaseoneimg' 
-                            src={`${jsonData.apiLink}/static/ShowCaseOne/${image.name}`}
+                            src={`${jsonData.apiLink}/static/groomswear/fancyKurtas/${image.name}`}
                             rounded
                         />
 
                         </Col>
                     ))}
                 </Row>
-            </Container>
-        </>
-    )
+                </Container>
+            </div>
+        </Container>
+
+        <Footer />
+
+
+
+    </>)
+
+
 }
 
-export default ShowCaseOne;
+export default FancyKurtas

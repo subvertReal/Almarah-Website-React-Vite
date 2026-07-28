@@ -11,7 +11,6 @@ import Footer from "../../components/Footer"
 import { useEffect, useState } from "react";
 
 //css import
-import '../../src/styles/menClothing/ShalwarKameez.css'
 import '../../src/styles/clothingGlobal.css'
 
 import jsonData from '../../src/assets/api.json';
@@ -43,10 +42,10 @@ function ShalwarKameez(){
                 <div className='headerClothingGlobal'>Shalwar Kameez</div>
                 <Container>
                     <Row>
-                    {imgArr.map((image, index) => (
-                        <Col className='showcaseOneColumn' xs={12} sm={6} md={4} lg={3}>
+                    {imgArr.map((image) => (
+                        <Col className='showcaseOneColumn' xs={12} sm={6} md={4} lg={3} key={image.name}>
                         
-                        <Image className='showcaseoneimg' key={index}
+                        <Image className='showcaseoneimg'
                             src={`${jsonData.apiLink}/static/menClothing/shalwarKameez/${image.name}`}
                             rounded
                         />

@@ -19,19 +19,18 @@ function NavBar(){
                     
                     <NavDropdown title="Mens Clothing"  id="basic-nav-dropdown">
                         <NavDropdown.Item href="/shalwar-kameez">Shalwar Kameez</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.1">Kurtas</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.1">Waistcoats</NavDropdown.Item>
+                        <NavDropdown.Item href="/waistcoat">Waistcoats</NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown title="Groomswear"  id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/shalwar-kameez">Sherwanis</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.1">Fancy Kurtas</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.1">Princecoats</NavDropdown.Item>
+                        <NavDropdown.Item href="/fancy-kurta">Fancy Kurtas</NavDropdown.Item>
+                        <NavDropdown.Item href="/princecoat">Princecoats</NavDropdown.Item>
+                        <NavDropdown.Item href="/sherwanis">Sherwanis</NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown title="Misc"  id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/shalwar-kameez">Shawls</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.1">Caps</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.1">Qullas</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.1">Footwear</NavDropdown.Item>
+                        <NavDropdown.Item href="/caps">Caps</NavDropdown.Item>
+                        <NavDropdown.Item href="/footwear">Footwear</NavDropdown.Item>
+                        <NavDropdown.Item href="/shawls">Shawls</NavDropdown.Item>
+                        <NavDropdown.Item href="/turban">Turban</NavDropdown.Item>
                     </NavDropdown>
 
                     <Nav.Link href='location' >Location</Nav.Link>
