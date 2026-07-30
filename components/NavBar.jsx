@@ -33,7 +33,9 @@ function NavBar(){
                         <NavDropdown.Item href="/turban">Turban</NavDropdown.Item>
                     </NavDropdown>
 
-                    <Nav.Link href='location' >Location</Nav.Link>
+                    <Nav.Link href='/location' >Location</Nav.Link>
+                    <Nav.Link href='https://api.whatsapp.com/send/?phone=%2B19054974684&text&type=phone_number&app_absent=0' >Contact Us</Nav.Link>
+                    
 
                 </Nav>
                 </Navbar.Collapse>

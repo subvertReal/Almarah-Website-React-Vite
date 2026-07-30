@@ -1,0 +1,24 @@
+@font-face {
+    font-family: ReadexPro;
+    src: url('../ReadexPro-Light.ttf');
+}
+
+.fontApply{
+    font-family: ReadexPro;
+}
+
+#map{
+    width: 100%;
+    height: auto;
+    padding-bottom: 1em;
+    
+}
+
+#btnDir{
+    background-color: rgb(70, 0, 0);
+    border: 0.1em black;
+    border-style: solid;
+    width: 14em;
+    height: 3em;
+    font-family: ReadexPro;
+}

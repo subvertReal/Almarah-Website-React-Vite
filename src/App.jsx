@@ -1,6 +1,6 @@
 import Home from '../pages/Home.jsx'
-
-import Location from '../pages/Location.jsx'
+import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // men clothing dropdown
 import ShalwarKameez from '../../almarah-reactvite/pages/mensClothing/ShalwarKameez.jsx';
@@ -17,9 +17,9 @@ import Footwear from '../../almarah-reactvite/pages/misc/Footwear.jsx';
 import Shawls from '../../almarah-reactvite/pages/misc/Shawls.jsx';
 import Turban from '../../almarah-reactvite/pages/misc/Turban.jsx';
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// other routes
 
-import './App.css'
+import Location from '../pages/Location.jsx'
 
 
 
@@ -47,6 +47,10 @@ function App() {
         <Route path='/footwear' element={<Footwear />} />
         <Route path='/shawls' element={<Shawls />} />
         <Route path='/turban' element={<Turban />} />
+
+        {/* other routes */}
+        <Route path='/location' element={<Location />} />
+
 
       </Routes>
       
