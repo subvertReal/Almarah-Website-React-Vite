@@ -43,10 +43,10 @@ function ShalwarKameez(){
                 <Container>
                     <Row>
                     {imgArr.map((image) => (
-                        <Col className='showcaseOneColumn' xs={12} sm={6} md={4} lg={3} key={image.name}>
+                        <Col className='showcaseOneColumn' xs={12} sm={6} md={4} lg={3} key={image.id}>
                         
                         <Image className='showcaseoneimg'
-                            src={`${jsonData.apiLink}/static/menClothing/shalwarKameez/${image.name}`}
+                            src={`${jsonData.apiLink}/static/menClothing/shalwarKameez/${image.pic1}.webp`}
                             rounded
                         />
 
