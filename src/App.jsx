@@ -20,6 +20,7 @@ import Turban from '../../almarah-reactvite/pages/misc/Turban.jsx';
 // other routes
 
 import Location from '../pages/Location.jsx'
+import Product from '../pages/Product.jsx';
 
 
 
@@ -48,8 +49,13 @@ function App() {
         <Route path='/shawls' element={<Shawls />} />
         <Route path='/turban' element={<Turban />} />
 
+        {/* Route that holds enlarged product info */}
+        <Route path='/product/:id' element={<Product />} />
+
         {/* other routes */}
         <Route path='/location' element={<Location />} />
+
+
 
 
       </Routes>
