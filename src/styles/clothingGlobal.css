@@ -1,21 +1,52 @@
-@font-face {
-    font-family: ReadexPro;
-    src: url('../ReadexPro-Light.ttf');
+.containerImage {
+    position: relative;
+    width: 100%;
+}
+
+.containerImage img {
+    width: auto;
+    height: auto;
 }
 
 
-.headerClothingGlobal{
-
-    text-align: left;
-    font-family: ReadexPro;
-    font-size: 2.5em;
-}
-
-.headerWhitespaceClothingGlobal{
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-.showcaseOneColumn{
+/* Both arrows */
+.arrowBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    background: transparent;
+    border: none;
     cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+}
+
+.arrowBtn img {
+    width: 35px;
+    height: 35px;
+}
+
+
+/* Left arrow */
+.arrowBtnLeft {
+    left: 10px;
+}
+
+
+/* Right arrow */
+.arrowBtnRight {
+    right: 10px;
+}
+
+
+.arrowBtn:hover {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+}
+
+
+.arrowBtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
