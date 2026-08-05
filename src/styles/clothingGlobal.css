@@ -1,3 +1,21 @@
+@font-face {
+    font-family: ReadexPro;
+    src: url('../ReadexPro-Light.ttf');
+}
+
+
+.headerClothingGlobal{
+
+    text-align: left;
+    font-family: ReadexPro;
+    font-size: 2.5em;
+}
+
+.headerWhitespaceClothingGlobal{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
 .containerImage {
     position: relative;
     width: 100%;
@@ -53,4 +71,8 @@
 
 .showcaseoneimg{
     cursor: pointer;
+}
+
+.textColorWhite{
+    color: white;
 }

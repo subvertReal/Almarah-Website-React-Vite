@@ -8,7 +8,7 @@
 }
 
 #map{
-    width: 100%;
+    width: 80%;
     height: auto;
     padding-bottom: 1em;
     
@@ -22,3 +22,4 @@
     height: 3em;
     font-family: ReadexPro;
 }
+

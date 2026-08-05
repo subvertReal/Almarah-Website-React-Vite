@@ -8,12 +8,13 @@ import Button from 'react-bootstrap/Button';
 import NavBar from '../components/NavBar'
 
 import '../src/App.css'
+import Footer from '../components/Footer';
 
 function Location(){
     return <>
     <NavBar />
 
-    <Container >
+    <Container className='footerPadBottom' >
     <div className='headerClothingGlobal headerWhitespaceClothingGlobal'>Visit Our Store Location!</div>
       <Row className="align-items-center justify-content-center">
         <Col>
@@ -22,7 +23,7 @@ function Location(){
       </Row>
       <Row className='align-items-center justify-content-center'>
         <Col xs={12} md={6} className="align-items-left">
-          <button onClick={window.open('https://maps.app.goo.gl/AtwbwmaT1MqWV3Jz6')} id="btnDir">Click for Directions</button>
+          <button onClick={() => window.open('https://maps.app.goo.gl/AtwbwmaT1MqWV3Jz6', '_blank')} id="btnDir">Click for Directions</button>
         </Col>
         <Col xs={12} md={6} className='text-middle'>
           <h2 className='fontApply'>Our Store Address</h2>
@@ -35,8 +36,17 @@ Saturday: 10:00 AM - 10:00 PM<br></br>
 Sunday: 10:00 AM - 10:00 PM </div>
 
         </Col>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+         <div className='textColorWhite'>a</div>
+        <br></br>
+        <div className='textColorWhite'>a</div>
       </Row>
     </Container>
+    
+    <Footer />
 
     </>
 }
