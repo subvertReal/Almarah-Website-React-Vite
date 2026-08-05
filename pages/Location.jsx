@@ -36,13 +36,7 @@ Saturday: 10:00 AM - 10:00 PM<br></br>
 Sunday: 10:00 AM - 10:00 PM </div>
 
         </Col>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-         <div className='textColorWhite'>a</div>
-        <br></br>
-        <div className='textColorWhite'>a</div>
+
       </Row>
     </Container>
     
