@@ -50,3 +50,7 @@
     opacity: 0.3;
     cursor: not-allowed;
 }
+
+.showcaseoneimg{
+    cursor: pointer;
+}

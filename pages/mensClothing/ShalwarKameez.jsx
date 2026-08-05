@@ -9,6 +9,7 @@ import NavBar from "../../components/NavBar"
 import Footer from "../../components/Footer"
 
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 //css import
 import '../../src/styles/clothingGlobal.css'
@@ -17,6 +18,7 @@ import jsonData from '../../src/assets/api.json';
 
 function ShalwarKameez(){
     const [imgArr, setImgArr] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         // function accesses api, gets json, and puts them into imgArr
@@ -45,7 +47,7 @@ function ShalwarKameez(){
                     {imgArr.map((image) => (
                         <Col className='showcaseOneColumn' xs={12} sm={6} md={4} lg={3} key={image.id}>
                         
-                        <Image onClick={() => window.open(`/product/${image.id}`, "_blank")} className='showcaseoneimg'
+                        <Image onClick={() => navigate(`/product/${image.id}`)} className='showcaseoneimg'
                             src={`${jsonData.apiLink}/static/menClothing/shalwarKameez/${image.pic1}.webp`}
                             rounded
                         />
