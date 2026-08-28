@@ -30,3 +30,8 @@
     background-color: rgb(70, 0, 0) !important;
 }
 
+#logo{
+    width: 3.5em;
+    height: auto;
+    padding-left: 1em;
+}

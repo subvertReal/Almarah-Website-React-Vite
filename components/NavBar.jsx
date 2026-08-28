@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../src/styles/navbar.css'
+import logo from '../src/logo.webp'
 
 
 
@@ -10,8 +11,9 @@ function NavBar(){
 
     return(
         <Navbar id='nav' expand="lg" className="bg-body-tertiary">
+        <Navbar.Brand  href="/"><img id='logo' src={logo}></img></Navbar.Brand>
             <Container>
-                {/* <Navbar.Brand  href="/"><img id='paanHutLogo' src=''></img></Navbar.Brand> */}
+                
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">

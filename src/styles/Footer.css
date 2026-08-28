@@ -3,7 +3,7 @@ html {
     min-height: 100%;
 }
 body {
-    margin: 0 0 1em; /* bottom = footer height */
+    margin: 0 0 5em; /* bottom = footer height */
     background-color: white;
 }
 
